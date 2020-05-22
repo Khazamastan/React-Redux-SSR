@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import routes from "./routes";
-// import * as styles from "./App.scss";
+import "normalize.css"
+require("../shared/scss/main.scss");
 
 class App extends Component {
   render() {

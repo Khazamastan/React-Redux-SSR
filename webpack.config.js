@@ -1,6 +1,8 @@
 const webpack = require("webpack");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const autoprefixer = require("autoprefixer");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const ManifestPlugin = require('webpack-manifest-plugin');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+
 
 const browserConfig = {
   entry: "./src/browser/index.js",
@@ -20,20 +22,13 @@ const browserConfig = {
         }
       },
       {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: "css-loader",
-              options: { importLoaders: 1 }
-            },
-            {
-              loader: "postcss-loader",
-              options: { plugins: [autoprefixer()] }
-            }
-          ]
-        })
-      },
+        test: /\.s?[ac]ss$/,
+        use: [
+            MiniCssExtractPlugin.loader,
+            { loader: 'css-loader', options: { url: false, sourceMap: false } },
+            { loader: 'sass-loader', options: { sourceMap: false } }
+        ],
+    },
       {
         test: /js$/,
         exclude: /(node_modules)/,
@@ -43,9 +38,12 @@ const browserConfig = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin({
-      filename: "public/css/[name].css"
-    })
+    new MiniCssExtractPlugin({
+      filename: 'public/css/[name].css'
+    }),
+    new ManifestPlugin({
+      fileName: 'public/asset-manifest.json'
+    }),
   ]
 };
 
@@ -70,6 +68,14 @@ const serverConfig = {
         }
       },
       {
+        test: /\.s?[ac]ss$/,
+        use: [
+            MiniCssExtractPlugin.loader,
+            { loader: 'css-loader', options: { url: false, sourceMap: false } },
+            { loader: 'sass-loader', options: { sourceMap: false } }
+        ],
+    },
+      {
         test: /\.css$/,
         use: [
           {
@@ -84,7 +90,15 @@ const serverConfig = {
         query: { presets: ["react-app"] }
       }
     ]
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'public/css/[name].css'
+    }),
+    new ManifestPlugin({
+      fileName: 'public/asset-manifest.json'
+    }),
+  ]
 };
 
 module.exports = [browserConfig, serverConfig];

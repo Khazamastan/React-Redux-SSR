@@ -1,0 +1,8 @@
+{
+  "main.css": "public/css/main.css",
+  "main.js": "server.js",
+  "main.css.map": "public/css/main.css.map",
+  "main.js.map": "server.js.map",
+  "public/media/logo.png": "public/media/logo.png",
+  "public/media/wizards.jpg": "public/media/wizards.jpg"
+}

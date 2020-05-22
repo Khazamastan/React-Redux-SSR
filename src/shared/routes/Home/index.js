@@ -4,10 +4,11 @@ import logo from "./logo.png";
 import wizards from "./wizards.jpg";
 // import "./index.css";
 import Layout from "../../components/Layout";
+import Banner from "../../components/Layout";
 
 const Home = (props) => {
   return <div>
-    <h1>Home Page</h1>
+    <Banner img={'media/banner.jpg'}/>
   </div>
 }
  const HomeContainer = () => {
