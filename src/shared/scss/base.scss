@@ -18,6 +18,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   line-height: 1.45;
+  letter-spacing: 1.5;
+  color: #5f5f5f;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -54,19 +56,108 @@ img {
 }
 
 
+b{
+  font-weight: bold;
+}
+
+
+//TEXT SIZE
 .text-normal{
   font-size: 12px;
 }
+.text-small{
+  font-size: 10px;
+}
 
+.text-medium{
+  font-size: 14px;
+}
+
+
+//FONT WEIGHT
 .text-bold{
   font-weight: bold;
 }
 
 
+//TEXT ALIGNMENT
+.text-center{
+  text-align: center;
+}
+
+
+//TEXT COLORS
 .text-gray{
   color: #5f5f5f;
 }
 
 .text-green{
   color: green;
+}
+
+.text-black{
+  color: #000;
+}
+
+//BOX SHAODW
+.shadow-bottom{
+    box-shadow: 0px 18px 20px -5px #d3d3d3;
+}
+
+
+//BORDER RADIUS
+.br-3{
+  border-radius: 3px;
+}
+.br-5{
+  border-radius: 5px;
+}
+.br-10{
+  border-radius: 10px;
+}
+
+
+
+//FLEX CLASS
+.flex{
+  display: flex;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+//MARGIN
+.mt-10{
+  margin-top: 10px;
+}
+
+.mt-20{
+  margin-top: 20px;
+}
+
+
+.mt-30{
+  margin-top: 30px;
+}
+
+.mt-40{
+  margin-top: 40px;
+}
+
+
+//BUTTONS
+.link-primary{
+  display: inline-block;
+  padding:0;
+  marging:0;
+  color: $primary-color;
+  @extend .text-bold;
+  padding: 0 10px;
 }

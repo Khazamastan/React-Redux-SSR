@@ -1,7 +1,9 @@
 {
   "files.exclude": {
     ".vscode": true,
-    "node_modules": true
+    "node_modules": true,
+    "server.js": true,
+    "server.js.map": true
   },
   "git.ignoreLimitWarning": true
 }

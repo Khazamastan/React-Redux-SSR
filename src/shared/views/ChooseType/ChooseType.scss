@@ -1,0 +1,11 @@
+
+.choose-type{
+    @extend .shadow-bottom;
+    @extend .br-3;
+    background-color: #fff;
+    min-height: 300px;  
+    position: relative;
+    width: 60%;
+    margin: auto;
+    transform: translate(0px, -180px);
+}

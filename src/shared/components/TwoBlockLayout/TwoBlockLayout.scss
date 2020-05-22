@@ -1,0 +1,9 @@
+.two-block-layout{
+    display: flex;
+    height: 100%;
+    &__col-6{
+        width: 50%;
+        flex-basis: 50%;
+        flex-wrap: nowrap;
+    }
+}

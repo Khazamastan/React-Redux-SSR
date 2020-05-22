@@ -1,8 +1,7 @@
-import React from "React";
+import React, { Component } from "react";
 
-const Banner = () => {
-
-    return (<h1> Banner</h1>)
+const Banner = ({img, height}) => {
+    return (<div className="banner" style={{backgroundImage: `url('${img}')`, height: height}}></div>)
 }
 
 export default Banner;
