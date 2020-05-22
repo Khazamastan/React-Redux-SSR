@@ -13,6 +13,7 @@
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.15.3",
+    "google-map-react": "^1.1.7",
     "isomorphic-fetch": "^2.2.1",
     "normalize.css": "^8.0.1",
     "react": "^15.6.1",

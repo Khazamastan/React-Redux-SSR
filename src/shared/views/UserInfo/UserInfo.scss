@@ -1,0 +1,9 @@
+.user-info{
+    @extend .br-3;
+    background-color: #fff;
+    // min-height: 300px;  
+    position: relative;
+    width: 55%;
+    margin: auto;
+    transform: translate(0px, -180px);
+}

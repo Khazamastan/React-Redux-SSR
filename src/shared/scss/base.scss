@@ -73,6 +73,10 @@ b{
   font-size: 14px;
 }
 
+.text-small-title{
+  font-size: 16px;
+}
+
 
 //FONT WEIGHT
 .text-bold{
@@ -126,6 +130,9 @@ b{
 .flex-column{
   flex-direction: column;
 }
+.justify-between{
+  justify-content: space-between;
+}
 .flex-center{
     display: flex;
     align-items: center;
@@ -133,7 +140,7 @@ b{
 }
 
 
-//MARGIN
+//MARGIN TOP
 .mt-10{
   margin-top: 10px;
 }
@@ -152,12 +159,176 @@ b{
 }
 
 
-//BUTTONS
+//MARGIN RIGHT
+.mr-10{
+  margin-right: 10px;
+}
+
+.mr-20{
+  margin-right: 20px;
+}
+
+
+.mr-30{
+  margin-right: 30px;
+}
+
+.mr-40{
+  margin-right: 40px;
+}
+
+
+//MARGIN BOTTOM
+.mb-10{
+  margin-bottom: 10px;
+}
+
+.mb-20{
+  margin-bottom: 20px;
+}
+
+
+.mb-30{
+  margin-bottom: 30px;
+}
+
+.mb-40{
+  margin-bottom: 40px;
+}
+
+
+//MARGIN LEFT
+.ml-10{
+  margin-left: 10px;
+}
+
+.ml-20{
+  margin-left: 20px;
+}
+
+
+.ml-30{
+  margin-left: 30px;
+}
+
+.ml-40{
+  margin-left: 40px;
+}
+
+
+//PADDING TOP
+.pt-10{
+  padding-top: 10px;
+}
+
+.pt-20{
+  padding-top: 20px;
+}
+
+
+.pt-30{
+  padding-top: 30px;
+}
+
+.pt-40{
+  padding-top: 40px;
+}
+
+
+//PADDING RIGHT
+.pr-10{
+  padding-right: 10px;
+}
+
+.pr-20{
+  padding-right: 20px;
+}
+
+
+.pr-30{
+  padding-right: 30px;
+}
+
+.pr-40{
+  padding-right: 40px;
+}
+
+//PADDING BOTTOM
+.pb-10{
+  padding-bottom: 10px;
+}
+
+.pb-20{
+  padding-bottom: 20px;
+}
+
+
+.pb-30{
+  padding-bottom: 30px;
+}
+
+.pb-40{
+  padding-bottom: 40px;
+}
+
+//PADDING LEFT
+.pl-10{
+  padding-left: 10px;
+}
+
+.pl-20{
+  padding-left: 20px;
+}
+
+
+.pl-30{
+  padding-left: 30px;
+}
+
+.pl-40{
+  padding-left: 40px;
+}
+
+//ANCHOR
 .link-primary{
   display: inline-block;
-  padding:0;
-  marging:0;
   color: $primary-color;
   @extend .text-bold;
-  padding: 0 10px;
+}
+
+
+//BUTTON
+.button{
+  display: inline-block;
+  margin:0;
+  border: 0;
+  @extend .br-3;
+  &:focus,&:hover{
+    outline-color: $primary-color;
+  }
+}
+.button-primary{
+  @extend .button;
+  padding:15px 25px;
+  background-color: $primary-color;
+  color: $white-color;
+  @extend .text-bold;
+  @extend .br-3;
+}
+
+.button-bordered{
+  @extend .button;
+  padding:15px 25px;
+  border:1px solid $primary-color;
+  color: $primary-color;
+  background-color: $white-color;
+  @extend .text-bold;
+  @extend .br-3;
+}
+
+
+
+//LINES
+.border-bottom-1{
+  border-bottom: 1px solid #f3f2f2;
 }

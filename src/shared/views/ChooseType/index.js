@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import TwoBlockLayout from "../../components/TwoBlockLayout"
-import Card from "../../components/Card"
+import TwoBlockLayout from "../../components/TwoBlockLayout";
+import Card from "../../components/Card";
 import Radio from "../../components/Radio";
-
-const Map = () => {
-    return <h1>Left</h1>
-}
-
+import Map from "../../components/Map";
+import A from "../../components/A";
+import Button from "../../components/Button";
+import Dropdown from "../../components/Dropdown";
+import getTimeIntervals from "../../../utils/getTimeIntervals"
 const radioOptions = [
   {
     label: "Pick-up",
@@ -18,37 +18,63 @@ const radioOptions = [
   },
 ];
 
-
+const getMinutesTody = () => {
+    const d = new Date();
+    const minutes = d.getMinutes();
+    const hours = d.getHours()
+    return hours*60 +minutes;
+}
 const ChooseOrderTypeContent = () => {
-    return (<div className="mt-40 flex-center flex-column">
-                <Radio type={'horizontal'} options={radioOptions}></Radio>
-                <p className="mt-20 flex-center">
-                    <a className="link-primary">View Menu</a> 
-                    <b>or</b> 
-                    <a className="link-primary">Buy Gift Card</a>
-                </p>
-            </div>);
-}
+    let timeIntervals = getTimeIntervals(30, getMinutesTody());
+  return (
+    <div className="mt-40 flex-center flex-column">
+      <Radio type={"horizontal"} options={radioOptions}></Radio>
+      <div className="mt-20 flex-center">
+        <div className="mr-20">
+          <Dropdown
+            list={timeIntervals}
+          />
+          {/* <Button type="bordred">1:06 PM (ASAP)</Button> */}
+        </div>
+        <Button>Start Order</Button>
+      </div>
+      <p className="mt-20 flex-center">
+        <A type={"primary"} extraClass={'pr-10'}>View Menu</A>
+        <b>or</b>
+        <A type={"primary"} extraClass={'pl-10'}>Buy Gift Card</A>
+      </p>
+    </div>
+  );
+};
+
 const ChooseOrderType = () => {
-    return <Card 
-        headerClass={`flex-center`} 
-        header={() => <p className="flex-center text-medium text-black text-bold">Choose Order Type</p>}
-        content={() => {
-            return (<ChooseOrderTypeContent/>)
-        }}
-        />
-    
-}
+  return (
+    <Card
+      headerClass={`flex-center`}
+      header={() => (
+        <p className="flex-center text-medium text-black text-bold">
+          Choose Order Type
+        </p>
+      )}
+      content={() => {
+        return <ChooseOrderTypeContent />;
+      }}
+    />
+  );
+};
 const ChooseType = () => {
-    return (<div className="choose-type">
-        <TwoBlockLayout
-            leftSize={6}
-            rightSize={6}
-            leftContent={() => <ChooseOrderType></ChooseOrderType>}
-            rightContent={() => <Map></Map>}>
-            >
-        </TwoBlockLayout>
-    </div>)
-}
+  return (
+    <div className="choose-type">
+      <TwoBlockLayout
+        leftSize={6}
+        rightSize={6}
+        leftContent={() => <ChooseOrderType></ChooseOrderType>}
+        rightContent={() => <Map></Map>}
+      >
+        >
+      </TwoBlockLayout>
+    </div>
+  );
+};
 
 export default ChooseType;

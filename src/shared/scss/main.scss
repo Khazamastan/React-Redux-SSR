@@ -1,8 +1,12 @@
 $primary-color: #fa7659;
+$white-color: #fff;
 @import "./base.scss";
 @import "../components/NavBar/Navbar.scss";
 @import "../components/Banner/Banner.scss";
 @import "../components/TwoBlockLayout/TwoBlockLayout.scss";
 @import "../views/ChooseType/ChooseType.scss";
+@import "../views/UserInfo/UserInfo.scss";
 @import "../components/Card/Card.scss";
 @import "../components/Radio/Radio.scss";
+@import "../components/Button/Button.scss";
+@import "../components/Dropdown/Dropdown.scss";
