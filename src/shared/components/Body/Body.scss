@@ -1,0 +1,9 @@
+.body{
+    min-height: calc(100vh - 100px);
+    margin: auto;
+    &--full{
+    }
+    &--container{
+        max-width: 80%;
+    }
+}

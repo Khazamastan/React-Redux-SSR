@@ -1,5 +1,5 @@
 import Home from "./routes/Home";
-import News from "./routes/News";
+import Menu from "./routes/Menu";
 
 const routes = [
   {
@@ -8,8 +8,9 @@ const routes = [
     component: Home
   },
   {
-    path: "/news",
-    component: News
+    path: "/menu",
+    exact: true,
+    component: Menu
   }
 ];
 

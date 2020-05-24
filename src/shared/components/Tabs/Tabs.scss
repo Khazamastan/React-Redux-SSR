@@ -1,0 +1,25 @@
+.tabs {
+  width: 100%;
+  &--normal{
+    &__inline {
+    border-bottom: 1px solid #eee;
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin-bottom: 0;
+    li {
+        display: inline-block;
+        margin-left: 0;
+        padding: 15px 15px;
+        border-bottom: 2px solid transparent;
+        transition: border 0.5s;
+        cursor: pointer;
+        @extend .text-normal;
+        &.selected {
+            @extend .text-bold;
+            border-bottom: 2px solid  $primary-color;
+            color: $primary-color;
+        }
+    }
+    }
+  }
+}

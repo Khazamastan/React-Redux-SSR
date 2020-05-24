@@ -1,0 +1,22 @@
+.product{
+    &--normal{
+        display: flex;
+        &__image-container{
+            min-width: 60px;
+            width: 60px;
+            position: relative;
+            margin: 0 15px 10px 0;
+            min-height: 60px;
+            height: 60px;
+            overflow: hidden;
+        }
+        &__image {
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 150%;
+        }
+    }
+}

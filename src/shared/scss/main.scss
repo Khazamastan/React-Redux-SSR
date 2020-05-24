@@ -1,12 +1,30 @@
 $primary-color: #fa7659;
 $white-color: #fff;
-@import "./base.scss";
-@import "../components/NavBar/Navbar.scss";
-@import "../components/Banner/Banner.scss";
-@import "../components/TwoBlockLayout/TwoBlockLayout.scss";
-@import "../views/ChooseType/ChooseType.scss";
-@import "../views/UserInfo/UserInfo.scss";
-@import "../components/Card/Card.scss";
-@import "../components/Radio/Radio.scss";
-@import "../components/Button/Button.scss";
-@import "../components/Dropdown/Dropdown.scss";
+
+//TEXT COLOR
+$text-primary: #fa7659;
+$color-text: #5f5f5f;
+
+//BORDER
+$border-color: #f5f5f5;
+
+@import "./base";
+@import "./grid";
+//ROUTES
+@import "../routes/Menu/MenuList";
+
+//VIEWS
+@import "../views/ChooseType/ChooseType";
+@import "../views/UserInfo/UserInfo";
+
+//COMPONENTS
+@import "../components/NavBar/Navbar";
+@import "../components/Body/Body";
+@import "../components/Banner/Banner";
+@import "../components/TwoBlockLayout/TwoBlockLayout";
+@import "../components/Card/Card";
+@import "../components/Radio/Radio";
+@import "../components/Button/Button";
+@import "../components/Dropdown/Dropdown";
+@import "../components/Tabs/Tabs";
+@import "../components/Product/Product";    

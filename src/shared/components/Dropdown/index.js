@@ -1,8 +1,8 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 class  Dropdown extends React.Component {  
     static PropTypes = {
-      list: React.PropTypes.array.isRequired
+      list: PropTypes.array.isRequired
     };
     
     static defaultProps = {

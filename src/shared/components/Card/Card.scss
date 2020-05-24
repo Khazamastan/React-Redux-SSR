@@ -1,8 +1,22 @@
 .card{
     &--normal{
         &__header{
-            border-bottom: 1px solid #f5f5f5;
+            border-bottom: 1px solid $border-color;
             height: 80px;
+        }
+    }
+
+    &--border,   &--border-hover{
+        padding: 15px 15px;
+        border: 1px solid $border-color;
+        border-radius: 3px;
+        // min-height: 120px;
+    }
+
+    &--border-hover{
+        box-shadow: 0px 1px 1px #f5f5f5;
+        &:hover{
+            border: 1px solid $primary-color;
         }
     }
 }

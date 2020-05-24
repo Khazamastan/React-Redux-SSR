@@ -19,7 +19,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 12px;
   line-height: 1.45;
   letter-spacing: 1.5;
-  color: #5f5f5f;
+  color:$color-text;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -73,8 +73,30 @@ b{
   font-size: 14px;
 }
 
-.text-small-title{
+
+//TITE TEXT SIZE
+.title-extra-small{
+  font-size: 14px;
+}
+
+.title-small{
   font-size: 16px;
+}
+
+.title-regular{
+  font-size: 18px;
+}
+
+.title-medium{
+  font-size: 20px;
+}
+
+.title-large{
+  font-size: 24px;
+}
+
+.title-huge{
+  font-size: 28px;
 }
 
 
@@ -91,8 +113,12 @@ b{
 
 
 //TEXT COLORS
+.text-primary{
+  color: $text-primary
+}
+
 .text-gray{
-  color: #5f5f5f;
+  color: $color-text;
 }
 
 .text-green{
@@ -102,6 +128,7 @@ b{
 .text-black{
   color: #000;
 }
+
 
 //BOX SHAODW
 .shadow-bottom{
@@ -302,6 +329,7 @@ b{
   display: inline-block;
   margin:0;
   border: 0;
+  cursor: pointer;
   @extend .br-3;
   &:focus,&:hover{
     outline-color: $primary-color;
@@ -326,9 +354,43 @@ b{
   @extend .br-3;
 }
 
-
-
 //LINES
 .border-bottom-1{
   border-bottom: 1px solid #f3f2f2;
+}
+
+
+//TYPOGRAPHY
+.title-base{
+  @extend .text-primary;
+  @extend .text-bold;
+}
+h1{
+  @extend .title-huge;
+  @extend .title-base;
+}
+
+h2{
+  @extend .title-large;
+  @extend .title-base;
+}
+
+h3{
+  @extend .title-medium;
+  @extend .title-base;
+}
+
+h4{
+  @extend .title-regular;
+  @extend .title-base;
+}
+
+h5{
+  @extend .title-small;
+  @extend .title-base;
+}
+
+h6{
+  @extend .title-extra-small;
+  @extend .title-base;
 }
