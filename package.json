@@ -23,7 +23,7 @@
     "react-router-dom": "^5.0.1",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "serialize-javascript": "^1.4.0",
+    "serialize-javascript": "^3.0.0",
     "source-map-support": "^0.4.15",
     "webpack-cli": "^3.3.11"
   },
