@@ -3,10 +3,10 @@ import NavBar from "../NavBar";
 import Body from "../Body";
 import Footer from "../Footer";
 
-const Layout = ({content, type='full'}) => {
+const Layout = ({data, content, type='full'}) => {
     return (<div>
         <div class="border-bottom-1">
-            <NavBar></NavBar>
+            {data && <NavBar {...data}></NavBar>}
         </div>
         <Body type={type}>
             {content()}

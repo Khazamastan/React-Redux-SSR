@@ -17,7 +17,7 @@ const ProductList = ({ products, category }) => {
   );
 };
 
-const MenuList = ({ news }) => {
+const MenuList = ({ products }) => {
   let categories = [
     "Starters",
     "Burgers",
@@ -38,7 +38,7 @@ const MenuList = ({ news }) => {
       <Tabs currentTab={1}>
         {categories.map((category) => (
           <Panel title={category}>
-            <ProductList products={news} category={category} />{" "}
+            <ProductList products={products} category={category} />{" "}
           </Panel>
         ))}
       </Tabs>

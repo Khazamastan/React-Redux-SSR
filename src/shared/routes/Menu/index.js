@@ -1,32 +1,42 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchNews } from "../../ducks";
+import { fetchProducts } from "./actions";
 import MenuList from "./MenuList";
 import Layout from "../../components/Layout";
 
 class Menu extends Component {
   static initialAction() {
-    return fetchNews();
+    return fetchProducts();
   }
 
   componentDidMount() {
-    if (!this.props.news) {
-      this.props.dispatch(Menu.initialAction());
-    }
+    // if (!this.props.menu) {
+    this.props.dispatch(Menu.initialAction());
+    // }
   }
 
   render() {
-    const { news } = this.props;
-    return <MenuList news={news} />;
+    const { menu } = this.props;
+    console.log(this.props);
+    return <MenuList products={menu} />;
   }
 }
 
-const mapStateToProps = state => ({
-  news: state.news
+const mapStateToProps = (state) => ({
+  menu: [],// state.menu,
+  restaurants: state.restaurants.data
 });
 
-const MenuContainer = (props) => {
-  return <Layout type={'container'} content={() => <Menu {...props}></Menu>}></Layout>;
-};
+class MenuContainer extends Component {
+  render() {
+    return (
+      <Layout
+        type={"container"}
+        data={this.props.restaurants && this.props.restaurants[0]}
+        content={() => <Menu {...this.props}></Menu>}
+      ></Layout>
+    );
+  }
+}
 
-export default connect(mapStateToProps)(MenuContainer);
+export default connect(mapStateToProps, null)(MenuContainer);

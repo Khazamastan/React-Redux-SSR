@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 const logoImg = require('./logo.png');
-const NavBar = () => {
+const NavBar = ({name, address}) => {
     return (
         <nav className="main-nav">
             <ul className="main-nav__list">
@@ -11,8 +11,8 @@ const NavBar = () => {
                         <img className="main-nav__list__left__logo" src="/media/logo.png"></img>
                     </Link>
                     <div>
-                        <p className="main-nav__list__left__name">Atlantic Bar & Gril</p>
-                        <p className="main-nav__list__left__address">7529 South Hampton St.Austin, TX 72195</p>
+                        <p className="main-nav__list__left__name">{name}</p>
+                        <p className="main-nav__list__left__address">{address}</p>
                     </div>
                     
                 </li>
